@@ -1,0 +1,6 @@
+<div class="movie-container flex">
+  <div class="poster-container flex relative overflow-hidden w-[50vw] h-[50vw] sm:w-[25vw] sm:h-[25vw] items-center text-center justify-center">
+    <h1 class="movie-title text-xl text-slate-50 drop-shadow absolute z-10">{{movie.title}} ({{movie.year}})</h1>
+    <img class="poster w-full m-auto absolute filter contrast-75 hover:filter-none transition" [src]="movie.image" [alt]="movie.title">
+  </div>
+</div>
