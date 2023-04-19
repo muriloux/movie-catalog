@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { CatalogComponent } from './components/catalog/catalog.component';
-import { MovieComponent } from './components/movie/movie.component';
+import { MovieCardComponent } from './components/movie-card/movie-card.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +13,7 @@ import { MovieComponent } from './components/movie/movie.component';
     SearchBarComponent,
     CarouselComponent,
     CatalogComponent,
-    MovieComponent,
+    MovieCardComponent,
   ],
   imports: [BrowserModule],
   providers: [],
