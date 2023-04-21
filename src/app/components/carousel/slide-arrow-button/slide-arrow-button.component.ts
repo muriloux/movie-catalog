@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import {
-  faChevronLeft,
-  faChevronRight,
+  faCircleChevronLeft,
+  faCircleChevronRight,
 } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -24,6 +24,6 @@ export class SlideArrowButtonComponent {
     console.log('hover');
   }
 
-  faChevronLeft = faChevronLeft;
-  faChevronRight = faChevronRight;
+  faCircleChevronLeft = faCircleChevronLeft;
+  faCircleChevronRight = faCircleChevronRight;
 }
