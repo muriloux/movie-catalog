@@ -61,6 +61,16 @@ export class ShowsService {
         image:
           'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_FMjpg_UX1000_.jpg',
       },
+      {
+        id: 6,
+        type: 'movie',
+        title: 'Fight Club',
+        year: 1999,
+        language: 'en',
+        rating: 'R',
+        image:
+          'https://m.media-amazon.com/images/M/MV5BMmEzNTkxYjQtZTc0MC00YTVjLTg5ZTEtZWMwOWVlYzY0NWIwXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_FMjpg_UX1000_.jpg',
+      },
     ];
   }
 

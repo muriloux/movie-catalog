@@ -10,6 +10,18 @@ import { ShowsService } from 'src/app/services/shows.service';
 export class CarouselComponent {
   movies: IShow[];
 
+  slide(direction: string) {
+    console.log(direction);
+  }
+
+  prevSlide() {
+    console.log('previous');
+  }
+
+  nextSlide() {
+    console.log('next');
+  }
+
   constructor() {
     const shows = new ShowsService();
     this.movies = shows.getMovies();

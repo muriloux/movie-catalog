@@ -1,6 +1,25 @@
-<div class="movie-container flex">
-  <div class="poster-container flex relative overflow-hidden w-[50vw] h-[50vw] sm:w-[25vw] sm:h-[25vw] items-center text-center justify-center">
-    <h1 class="movie-title text-xl text-slate-50 drop-shadow absolute z-10">{{movie.title}} ({{movie.year}})</h1>
-    <img class="poster w-full m-auto absolute filter contrast-75 hover:filter-none transition" [src]="movie.image" [alt]="movie.title">
+<div
+  class="poster-container flex relative pointer-events-none overflow-hidden w-[50vw] h-[50vw] sm:w-[20vw] sm:h-[20vw] items-center text-center justify-center"
+>
+  <div
+    class="flex movie-title text-slate-50 absolute z-10 items-center justify-center w-[50vw] h-[50vw] sm:w-[20vw] sm:h-[20vw] bg-gradient-to-t from-[rgba(0,0,0,0.8)] to-transparent"
+  >
+    <p
+      (mouseenter)="onHover()"
+      (mouseleave)="onBlur()"
+      class="mx-10 sm:text-[1rem] md:text-[1.25rem] hover:text-[1.3rem] transition-all pointer-events-auto cursor-pointer"
+      [ngClass]="{ 'opacity-40': !active }"
+    >
+      <span>{{ movie.title }}</span
+      ><br />
+      <span> ({{ movie.year }})</span>
+    </p>
   </div>
+
+  <img
+    [ngClass]="{ 'filter-none': carousel == true, 'scale-[1.075]': active }"
+    class="poster w-full m-auto absolute filter contrast-70 hover:filter-none transition duration-500"
+    [src]="movie.image"
+    [alt]="movie.title"
+  />
 </div>

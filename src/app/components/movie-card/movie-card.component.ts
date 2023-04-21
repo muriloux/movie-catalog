@@ -8,4 +8,19 @@ import { IShow } from 'src/app/models/show.model';
 })
 export class MovieCardComponent {
   @Input() movie: IShow = {} as IShow;
+  @Input() active: boolean = false;
+  @Input() carousel: boolean = false;
+
+  onHover() {
+    if (!this.carousel) {
+      return;
+    }
+    this.active = true;
+  }
+  onBlur() {
+    if (!this.carousel) {
+      return;
+    }
+    this.active = false;
+  }
 }

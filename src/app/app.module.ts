@@ -6,6 +6,8 @@ import { SearchBarComponent } from './components/search-bar/search-bar.component
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { CatalogComponent } from './components/catalog/catalog.component';
 import { MovieCardComponent } from './components/movie-card/movie-card.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { SlideArrowButtonComponent } from './components/carousel/slide-arrow-button/slide-arrow-button.component';
 
 @NgModule({
   declarations: [
@@ -14,8 +16,9 @@ import { MovieCardComponent } from './components/movie-card/movie-card.component
     CarouselComponent,
     CatalogComponent,
     MovieCardComponent,
+    SlideArrowButtonComponent,
   ],
-  imports: [BrowserModule],
+  imports: [BrowserModule, FontAwesomeModule],
   providers: [],
   bootstrap: [AppComponent],
 })
