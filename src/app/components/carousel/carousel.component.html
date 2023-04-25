@@ -1,21 +1,26 @@
 <div class="max-w-full w-7xl mx-auto">
   <div class="relative">
-    <div class="carousel flex overflow-x-auto">
+    <div
+      class="carousel flex overflow-x-auto scroll-smooth snap-center"
+      #carousel
+    >
       <app-movie-card
         *ngFor="let movie of movies; let i = index"
         [movie]="movie"
-        [id]="i"
+        [id]="'movie' + (i + 1)"
         [carousel]="true"
       ></app-movie-card>
     </div>
     <button
-      class="absolute left-0 top-1/2 transform -translate-y-1/2 focus:outline-none"
+      [ngClass]="{ 'opacity-0': activeMovieNumber <= 1 }"
+      class="absolute z-20 duration-700 left-0 top-1/2 transform -translate-y-1/2 focus:outline-none transition hover:translate-x-[-3px]"
       (click)="prevSlide()"
     >
       <app-slide-arrow-button [isLeft]="true"></app-slide-arrow-button>
     </button>
     <button
-      class="absolute right-0 top-1/2 transform -translate-y-1/2 focus:outline-none"
+      [ngClass]="{ 'opacity-0': activeMovieNumber >= movies.length }"
+      class="absolute z-20 duration-700 right-0 top-1/2 transform -translate-y-1/2 focus:outline-none transition hover:translate-x-[3px]"
       (click)="nextSlide()"
     >
       <app-slide-arrow-button [isRight]="true"></app-slide-arrow-button>

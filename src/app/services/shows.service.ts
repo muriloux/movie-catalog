@@ -71,6 +71,26 @@ export class ShowsService {
         image:
           'https://m.media-amazon.com/images/M/MV5BMmEzNTkxYjQtZTc0MC00YTVjLTg5ZTEtZWMwOWVlYzY0NWIwXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_FMjpg_UX1000_.jpg',
       },
+      {
+        id: 7,
+        type: 'movie',
+        title: 'Forrest Gump',
+        year: 1994,
+        language: 'en',
+        rating: 'R',
+        image:
+          'https://m.media-amazon.com/images/M/MV5BNWIwODRlZTUtY2U3ZS00Yzg1LWJhNzYtMmZiYmEyNmU1NjMzXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_FMjpg_UX1000_.jpg',
+      },
+      {
+        id: 8,
+        type: 'movie',
+        title: 'The Lord of the Rings: The Return of the King',
+        year: 2003,
+        language: 'en',
+        rating: 'R',
+        image:
+          'https://m.media-amazon.com/images/M/MV5BNzA5ZDNlZWMtM2NhNS00NDJjLTk4NDItYTRmY2EwMWZlMTY3XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_FMjpg_UX1000_.jpg',
+      },
     ];
   }
 
