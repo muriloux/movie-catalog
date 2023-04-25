@@ -26,7 +26,6 @@ export class CarouselComponent {
   ngAfterViewInit(changes: SimpleChanges) {}
 
   prevSlide() {
-    console.log('previous');
     if (this.activeMovieNumber === 1) {
       return;
     }
@@ -41,7 +40,6 @@ export class CarouselComponent {
   }
 
   nextSlide() {
-    console.log('next');
     if (this.activeMovieNumber === this.movies.length) {
       return;
     }

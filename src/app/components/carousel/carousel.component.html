@@ -1,9 +1,6 @@
 <div class="max-w-full w-7xl mx-auto">
   <div class="relative">
-    <div
-      class="carousel flex overflow-x-auto scroll-smooth snap-center"
-      #carousel
-    >
+    <div class="carousel flex overflow-x-auto scroll-smooth" #carousel>
       <app-movie-card
         *ngFor="let movie of movies; let i = index"
         [movie]="movie"

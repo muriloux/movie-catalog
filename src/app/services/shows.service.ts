@@ -10,6 +10,9 @@ export class ShowsService {
       this._series = shows.series;
       return;
     }
+    console.log(
+      '\nShows service constructor: \nNo show data provided, using mockup data.'
+    );
     this._movies = [
       {
         id: 1,
