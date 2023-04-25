@@ -1,12 +1,24 @@
 import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { SearchBarComponent } from './components/search-bar/search-bar.component';
+import { CarouselComponent } from './components/carousel/carousel.component';
+import { CatalogComponent } from './components/catalog/catalog.component';
+import { MovieCardComponent } from './components/movie-card/movie-card.component';
+import { SlideArrowButtonComponent } from './components/carousel/slide-arrow-button/slide-arrow-button.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [
-        AppComponent
+        AppComponent,
+        SearchBarComponent,
+        CarouselComponent,
+        CatalogComponent,
+        MovieCardComponent,
+        SlideArrowButtonComponent,
       ],
+      imports: [FontAwesomeModule],
     }).compileComponents();
   });
 
@@ -20,12 +32,5 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
     expect(app.title).toEqual('movie-catalog');
-  });
-
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('movie-catalog app is running!');
   });
 });
