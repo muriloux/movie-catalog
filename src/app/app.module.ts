@@ -8,6 +8,7 @@ import { CatalogComponent } from './components/catalog/catalog.component';
 import { MovieCardComponent } from './components/movie-card/movie-card.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SlideArrowButtonComponent } from './components/carousel/slide-arrow-button/slide-arrow-button.component';
+import { SectionComponent } from './components/section/section.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { SlideArrowButtonComponent } from './components/carousel/slide-arrow-but
     CatalogComponent,
     MovieCardComponent,
     SlideArrowButtonComponent,
+    SectionComponent,
   ],
   imports: [BrowserModule, FontAwesomeModule],
   providers: [],

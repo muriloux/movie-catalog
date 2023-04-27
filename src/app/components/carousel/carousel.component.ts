@@ -14,7 +14,7 @@ import { ShowsService } from 'src/app/services/shows.service';
   styleUrls: ['./carousel.component.css'],
 })
 export class CarouselComponent {
-  movies: IShow[];
+  movies: IShow[] = [];
   activeMovieNumber = 1;
   @ViewChild('carousel', { static: false }) carouselEl:
     | ElementRef<HTMLDivElement>
@@ -50,15 +50,15 @@ export class CarouselComponent {
     this.activeMovieNumber += 1;
     this.carouselEl?.nativeElement
       .querySelector(`#movie${this.activeMovieNumber}`)
-      ?.scrollIntoView({ behavior: 'smooth' });
+      ?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
   }
 
   constructor() {
     const shows = new ShowsService();
-    const moviesLength = shows.getMovies().length;
-    this.movies = [];
+    const movies = shows.getMovies();
+    const moviesLength = movies.length;
     if (!(moviesLength < 5 || moviesLength > 10)) {
-      this.movies = shows.getMovies();
+      this.movies = movies;
     } else {
       throw new Error(
         `Invalid number of movies\n Must have at least 5 and at most 10 \n Got: ${moviesLength}`

@@ -32,6 +32,7 @@ export interface IShow {
     | 'ta'
     | 'mr'
     | 'kn';
+  plot: string;
   rating: 'G' | 'PG' | 'PG-13' | 'R' | 'NC-17';
   image: string;
 }
