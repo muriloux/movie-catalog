@@ -1,18 +1,5 @@
 import { Component, Input } from '@angular/core';
-import {
-  faCirclePlus,
-  faFolderPlus,
-  faPlugCircleMinus,
-  faPlus,
-  faPlusSquare,
-  faSplotch,
-  faTable,
-  faTableCellsLarge,
-  faTableColumns,
-  faTableList,
-  faTabletAndroid,
-  faWandSparkles,
-} from '@fortawesome/free-solid-svg-icons';
+import { faTable, faWandSparkles } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-section',
@@ -21,7 +8,7 @@ import {
 })
 export class SectionComponent {
   @Input() name: string = '';
-  @Input() sectionId: 'new-movies' | 'catalog' | undefined;
+  @Input() sectionId: 'new-shows' | 'catalog' | undefined;
   faSplotch = faWandSparkles;
-  faTableCellsLarge = faTable;
+  faTable = faTable;
 }
