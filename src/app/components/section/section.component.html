@@ -1,10 +1,11 @@
 <section [id]="sectionId">
-  <div class="bg-neutral-50 border border-t-neutral-100 border-b-neutral-200">
-    <h1 class="px-2 py-1 text-lg font-semibold text-neutral-800">
-      <fa-icon *ngIf="sectionId === 'new-shows'" size="xs" [icon]="faSplotch" />
-      <fa-icon *ngIf="sectionId === 'catalog'" size="xs" [icon]="faTable" />
-      {{ name }}
-    </h1>
+  <div class="p-2">
+    <fa-icon *ngIf="sectionId === 'new-shows'" size="xs" [icon]="faSplotch" />
+    <fa-icon *ngIf="sectionId === 'catalog'" size="xs" [icon]="faTable" />
+    <span class="font-semibold px-2">{{ name }}</span>
   </div>
+  <!--<h1 class="px-2 py-1 text-lg font-semibold text-neutral-800">
+    </h1>-->
+
   <ng-content></ng-content>
 </section>

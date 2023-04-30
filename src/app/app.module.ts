@@ -9,6 +9,8 @@ import { MovieCardComponent } from './components/movie-card/movie-card.component
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SlideArrowButtonComponent } from './components/carousel/slide-arrow-button/slide-arrow-button.component';
 import { SectionComponent } from './components/section/section.component';
+import { NavBarComponent } from './components/nav-bar/nav-bar.component';
+import { NavBarItemComponent } from './components/nav-bar/nav-bar-item/nav-bar-item.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +21,8 @@ import { SectionComponent } from './components/section/section.component';
     MovieCardComponent,
     SlideArrowButtonComponent,
     SectionComponent,
+    NavBarComponent,
+    NavBarItemComponent,
   ],
   imports: [BrowserModule, FontAwesomeModule],
   providers: [],
