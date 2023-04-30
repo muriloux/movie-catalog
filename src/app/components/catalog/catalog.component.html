@@ -1,6 +1,7 @@
 <div class="movies catalog-container">
-  <div class="flex flex-wrap justify-between">
+  <div class="flex flex-wrap justify-evenly">
     <app-movie-card
+      class="p-4"
       *ngFor="let movie of movies"
       [movie]="movie"
       [active]="true"
