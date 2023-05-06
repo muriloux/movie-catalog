@@ -10,6 +10,7 @@ export class MovieCardComponent {
   @Input() movie: IShow = {} as IShow;
   @Input() active: boolean = false;
   @Input() carousel: boolean = false;
+  @Input() featured: boolean = false;
 
   onHover() {
     if (!this.carousel) {

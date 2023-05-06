@@ -1,9 +1,17 @@
 <div
-  class="poster-container flex relative pointer-events-none overflow-hidden w-[50vw] h-[50vw] sm:w-[20vw] sm:h-[20vw] items-center text-center justify-center"
+  class="poster-container flex relative pointer-events-none overflow-hidden items-center text-center justify-center"
+  [ngClass]="{
+    'w-full h-[35vw] sm:h-[35vw]': featured,
+    'w-[50vw] sm:w-[20vw] h-[50vw] sm:h-[20vw]': !featured
+  }"
 >
   <div
-    class="flex movie-title absolute z-10 transition duration-500 items-center justify-center w-[50vw] h-[50vw] sm:w-[20vw] sm:h-[20vw] bg-gradient-to-t from-[rgba(0,0,0,0.9)] via-[rgba(0,0,0,0.7)] to-transparent"
-    [ngClass]="{ 'opacity-50': active }"
+    class="flex movie-dark-layer absolute z-10 transition duration-500 content-center items-center justify-center bg-gradient-to-t from-[rgba(0,0,0,0.9)] via-[rgba(0,0,0,0.7)] to-transparent"
+    [ngClass]="{
+      'opacity-50': active,
+      'w-full h-full sm:h-[35vw]': featured,
+      'w-[50vw] h-[50vw] sm:w-[20vw] sm:h-[20vw]': !featured
+    }"
   ></div>
   <p
     (mouseenter)="onHover()"

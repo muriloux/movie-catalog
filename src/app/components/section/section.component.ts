@@ -1,5 +1,9 @@
 import { Component, Input } from '@angular/core';
-import { faTable, faWandSparkles } from '@fortawesome/free-solid-svg-icons';
+import {
+  faTable,
+  faWandSparkles,
+  faStar,
+} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-section',
@@ -8,7 +12,8 @@ import { faTable, faWandSparkles } from '@fortawesome/free-solid-svg-icons';
 })
 export class SectionComponent {
   @Input() name: string = '';
-  @Input() sectionId: 'new-shows' | 'catalog' | undefined;
+  @Input() sectionId: 'new-shows' | 'catalog' | 'featured' | undefined;
   faSplotch = faWandSparkles;
   faTable = faTable;
+  faStar = faStar;
 }
