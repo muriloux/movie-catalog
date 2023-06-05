@@ -27,7 +27,11 @@
   </p>
 
   <img
-    [ngClass]="{ 'filter-none': carousel == true, 'scale-[1.075]': active }"
+    [ngClass]="{
+      'filter-none': carousel,
+      'scale-[1.075]': active,
+      '-top-10': featured
+    }"
     class="poster w-full m-auto absolute filter contrast-70 hover:filter-none transition duration-500"
     [src]="movie.image"
     [alt]="movie.title"

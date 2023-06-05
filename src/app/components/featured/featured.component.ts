@@ -8,5 +8,5 @@ import { ShowsService } from 'src/app/services/shows.service';
   styleUrls: ['./featured.component.css'],
 })
 export class FeaturedComponent {
-  movie: IShow = new ShowsService().getMovies()[1];
+  movie: IShow = new ShowsService().getMovies()[0];
 }
